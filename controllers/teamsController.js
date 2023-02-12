@@ -36,7 +36,15 @@ export const obtenerJugadoresPorPosicion = async (req, res) => {
     const equiposDB = await sport.find()
     const equipos = equiposDB[0].equipo
     const jugadoresFiltrados = equipos
-      .map(equipos => equipos.jugadores.jugador.find(jugador => jugador.rol.nombre === posicion))
+      .map(equipo => {
+        const { jugadores: {jugador} } = equipo
+
+        const jugadoresFiltrados = jugador.filter(jugador => jugador.rol.nombre === posicion)
+
+        equipo.jugadores.jugador = jugadoresFiltrados
+
+        return equipo
+      })
 
     res.send(jugadoresFiltrados)
   } catch (error) {
