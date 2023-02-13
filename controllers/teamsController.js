@@ -4,23 +4,19 @@ import { capitalizarPosicion } from "../helpers/capitalizarPosicion.js"
 
 export const obtenerJugadoresPorEquipoId = async (req, res) => {
   const {idTeam} = req.params
-
   try {
     const teams = await sport.find()
-    const existeEquipo = teams[0].equipo
-      .some(team => team.id === idTeam)
+    const existeEquipo = teams[0].equipo.some(team => team.id === idTeam)
 
-    if(existeEquipo) {
-      const jugadores = teams[0]
-        .find(team => team.id === idTeam).jugadores.jugador
+    if(!existeEquipo) return res.status(404).send({msg: 'No se encontraron jugadores'})
 
-      res.send(jugadores)
-    } else {
-      res.status(404).send({msg: 'No se encontraron jugadores'})
-    }
+    const jugadores = teams[0].equipo.find(team => team.id === idTeam).jugadores.jugador
+
+    res.send(jugadores)
   } catch (error) {
+    console.log(error)
     res.status(404).send({
-      msg: 'No se encontraron jugadores'
+      msg: 'No se encontraron jugadores',
     })
   }
 }
@@ -35,8 +31,7 @@ export const obtenerJugadoresPorPosicion = async (req, res) => {
   try {
     const equiposDB = await sport.find()
     const equipos = equiposDB[0].equipo
-    const jugadoresFiltrados = equipos
-      .map(equipo => {
+    const jugadoresFiltrados = equipos.map(equipo => {
         const { jugadores: {jugador} } = equipo
 
         const jugadoresFiltrados = jugador.filter(jugador => jugador.rol.nombre === posicion)

@@ -3,6 +3,7 @@ import express from 'express'
 import dbConnect from './config/db.js'
 import teamRoutes from './routes/team.js'
 import teamsRoutes from './routes/teams.js'
+import authRoutes from './routes/auth.js'
 
 const app = express()
 app.use(express.json())
@@ -10,6 +11,7 @@ dbConnect()
 
 app.use('/api/team', teamRoutes)
 app.use('/api/teams', teamsRoutes)
+app.use('/api/auth', authRoutes)
 
 const PORT = 3000
 
