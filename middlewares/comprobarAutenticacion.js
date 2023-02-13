@@ -1,7 +1,7 @@
 import { verificarToken } from "../helpers/JWT.js"
 import user from '../models/user.js'
 
-
+// Comprueba autenticación cada vez que se hace una petición que se requiera estar logueado
 export const comprobarAutenticacion = async (req, res, next) => {
 
   if(req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {

@@ -1,3 +1,6 @@
+// Recibe la posición entregada en la url y
+// la transforma para que coincida con las posiciones de la base de datos
+
 export const capitalizarPosicion = posicion => {
   const pos = posicion.toLowerCase()
   if(pos === 'dt') {

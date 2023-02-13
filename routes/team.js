@@ -4,6 +4,8 @@ import { comprobarAutenticacion } from "../middlewares/comprobarAutenticacion.js
 
 const router = Router()
 
-router.get('/', comprobarAutenticacion, obtenerEquipos)
+// Rutas para obtener equipos, antes de la ruta se debe utilizar /api
+// Para utilizar estas rutas se debe mandar el token de autenticación como Bearer Token
+router.get('/', comprobarAutenticacion, obtenerEquipos) // -> /api/
 
 export default router

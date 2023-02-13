@@ -1,5 +1,6 @@
 import mongoose from 'mongoose'
 
+// Configuración para la base de datos
 const dbConnect = async () => {
   try {
     mongoose.set('strictQuery', false);

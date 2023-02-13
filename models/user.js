@@ -1,5 +1,6 @@
 import { Schema, model } from "mongoose"
 
+// Esquema de usuario para autenticación
 const userSchema = Schema(
   {
     name: {

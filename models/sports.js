@@ -1,5 +1,6 @@
 import { Schema, model } from 'mongoose'
 
+// Esquema de sports según data entregada
 const sportsSchema = Schema({
   deporte: {
     id: String,
