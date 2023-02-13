@@ -9,10 +9,11 @@ const app = express()
 app.use(express.json())
 dbConnect()
 
+// Crea los endpoints
 app.use('/api/team', teamRoutes)
 app.use('/api/teams', teamsRoutes)
 app.use('/api/auth', authRoutes)
 
-const PORT = 3000
+const PORT = process.env.PORT || 3000
 
 app.listen(PORT, () => console.log(`running on port ${PORT}`))
