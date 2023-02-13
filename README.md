@@ -76,14 +76,14 @@ Al hacer el login, se responderá con un json que contiene un token, el cual deb
 
 Imagen de referencia:
 
-https://raw.githubusercontent.com/caspec1/test-fz-sports/main/img/obtenerToken.png
+![Image text](https://github.com/Caspec1/test-fz-sports/blob/main/img/obtenerToken.png)
 
 # Configurar token en postman
 Al crear una nueva petición en postman es necesario configurar el token, por lo que, en la petición que se va a realizar hay que dirigirse a la pestaña de Authorization y en Type selección Bearer Token. Una vez seleccionado hay que pegar el token obtenido anteriormente en el recuadro de Token
 
 Imagen de referencia:
 
-https://raw.githubusercontent.com/caspec1/test-fz-sports/main/img/configurarToken.png
+![Image text](https://github.com/Caspec1/test-fz-sports/blob/main/img/configurarToken.png)
 
 # EndPoints de la evaluación
 ## Obtener todos los equipos
