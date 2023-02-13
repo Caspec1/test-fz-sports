@@ -168,3 +168,7 @@ http://localhost:3000/api/teams/players/dt?page=1&limit=5
 
 ```
 Esto retornará la primera página mostrando solamente los dt de 5 equipos.
+
+# Gracias por la oportunidad
+
+Quiero agradecer por la oportunidad de formar parte de esta prueba técnica, con la cual aprendí y reforcé mi lógica de programación. Espero que pueda ser de su agrado.
