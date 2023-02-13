@@ -37,6 +37,8 @@ MongoDB conectado en ac-ypmfkoh-shard-00-00.4lw6bas.mongodb.net:27017
 
 # IMPORTANTE: Todas las peticiones deben realizarse con Postman, ThunderClient u otra herramienta que permita enviar el header de Authorization con Bearer Token
 
+# NOTA: Se pueden realizar las peticiones a "http://localhost:3000" si se hizo toda la configuración de lo contrario, la api se encuentra desplegada en Railway, por lo que también pueden realizar peticiones a la siguiente url "https://test-fz-sports.up.railway.app"
+
 # Autenticación
 ## Registro
 Para realizar las consultas definidas en la prueba recibida es necesario estar autenticado, por lo que, lo primero es registrar una cuenta.
