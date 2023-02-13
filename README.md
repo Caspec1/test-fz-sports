@@ -40,7 +40,7 @@ MongoDB conectado en ac-ypmfkoh-shard-00-00.4lw6bas.mongodb.net:27017
 # Autenticación
 ## Registro
 Para realizar las consultas definidas en la prueba recibida es necesario estar autenticado, por lo que, lo primero es registrar una cuenta.
-Se debe realizar una petición tipo post cons los siguientes campos:
+Se debe realizar una petición tipo post con los siguientes campos:
 
 ```json
 {
@@ -132,7 +132,7 @@ position=delantero
 
 Ejemplo:
 ```url
-http://localhost:3000/api/teams/143/players?volante
+http://localhost:3000/api/teams/143/players?position=volante
 ```
 
 Esto retornará solamente los volantes correspondientes al equipo ingresado.
